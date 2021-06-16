@@ -8,7 +8,7 @@ import { Context } from "../../contexts/Context";
 
 const Header: FC = (): ReactElement => {
   //@ts-ignore
-  const [state, dispatch] = useContext(Context);
+  const dispatch = useContext(Context)[1];
   // Header hide/show on wheel down/up
   useEffect(() => {
     var lastOffsetY = 0;
