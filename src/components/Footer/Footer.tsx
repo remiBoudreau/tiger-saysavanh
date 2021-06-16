@@ -1,5 +1,4 @@
 import { FC, ReactElement } from "react";
-import { useLocation } from "react-router-dom";
 import "./footer.scss";
 
 const Footer: FC = (): ReactElement => {
