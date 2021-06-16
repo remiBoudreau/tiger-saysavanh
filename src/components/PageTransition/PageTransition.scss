@@ -1,0 +1,26 @@
+.transition-overlay {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  position: fixed;
+  top: 0vh;
+  left: -100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  z-index: 9;
+}
+.transition {
+  transition: 500ms;
+  transition-delay: 250ms;
+  transition-timing-function: ease-out;
+  left: 0vw;
+}
+.transition-end {
+  left: 100vw;
+}
+.transition-reset {
+  left: -100vw;
+  transition: 0ms;
+}

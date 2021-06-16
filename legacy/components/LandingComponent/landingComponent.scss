@@ -1,0 +1,144 @@
+.landing-logo {
+  object-fit: contain;
+  width: 125px;
+}
+.landing-container {
+  width: 90vw;
+  height: 100vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  overflow: hidden;
+  position: relative;
+}
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.landing-sidebar {
+  width: 17.5%;
+  padding-top: 5vw;
+  padding-right: 5vw;
+  display: inline-block;
+  vertical-align: top;
+  height: calc(100vh - 10vw);
+  position: fixed;
+  background: white;
+  z-index: 1;
+}
+.landing-header {
+  font-size: 34px;
+}
+.landing-subheader {
+  font-size: 16px;
+}
+.landing-hook {
+  font-size: 20px;
+}
+.solid-padding-left {
+  position: fixed;
+  width: 5vw;
+  height: 100vh;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.solid-padding-right {
+  position: fixed;
+  width: 5vw;
+  height: 100vh;
+  background: white;
+  z-index: 5;
+  top: 0;
+  right: 0;
+}
+.solid-padding-top {
+  position: fixed;
+  width: 100vw;
+  height: 5vw;
+  background: white;
+  z-index: 5;
+  top: 0;
+  right: 0;
+}
+.solid-padding-top {
+  position: fixed;
+  width: 100vw;
+  height: 5vw;
+  background: white;
+  z-index: 5;
+  top: 0;
+}
+.solid-padding-bottom {
+  position: fixed;
+  width: 100vw;
+  height: 5vw;
+  background: white;
+  z-index: 5;
+  bottom: 0;
+}
+.button-container {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #0a0a0a;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: #0a0a0a;
+  &:hover {
+    color: #0a0a0a;
+    background-color: #ffffff;
+  }
+}
+@media (max-width: 934px) {
+  .landing-sidebar {
+    width: 50vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 0;
+    height: calc(50vh - 4vw);
+    display: inline-block;
+    position: fixed;
+    background: white;
+    z-index: 1;
+    transform: translateY(50vh);
+  }
+  .sidebar-container {
+    height: 100%;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .landing-header {
+    font-size: 18px;
+  }
+  .landing-subheader {
+    font-size: 12px;
+  }
+  .landing-hook {
+    font-size: 14px;
+  }
+  .button-container {
+    font-size: 14px;
+  }
+  .landing-logo {
+    object-fit: contain;
+    width: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .landing-sidebar {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 90vw;
+  }
+}

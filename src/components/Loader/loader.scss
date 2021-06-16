@@ -1,0 +1,44 @@
+$color: #5f5f5f;
+.loader-container {
+  position: relative;
+  height: calc(100vh - 100px);
+}
+.svg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+}
+
+svg {
+  width: min(500px, 50vw);
+  margin-bottom: 100px;
+}
+
+path {
+  fill: none;
+  stroke: $color;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1000 1000;
+  stroke-dashoffset: 1000;
+  animation: 2.5s ease-in-out infinite both spinner;
+}
+
+@keyframes spinner {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -1000;
+  }
+}
