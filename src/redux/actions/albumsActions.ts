@@ -46,6 +46,7 @@ export const fetchAlbums = (): ThunkAction<void, RootState, unknown, AnyAction> 
       });
       
     } catch (error) {
+      //@ts-ignore
       dispatch({
         type: ALBUMS_FETCH_FAIL,
         payload: error.message
