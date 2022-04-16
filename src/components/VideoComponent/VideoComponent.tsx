@@ -22,6 +22,7 @@ const VideoComponent: FC<{ video: video }> = ({ video }): ReactElement => {
             <p>{video.title}</p>
             <p>{video.artist}</p>
           </div>
+          // @ts-ignore
           <ReactPlayer
             url={video.url}
             className="mobile-player"
