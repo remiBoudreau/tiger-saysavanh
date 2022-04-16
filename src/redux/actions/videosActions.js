@@ -9,7 +9,7 @@ import { RootState } from '../store';
 import { ThunkAction } from 'redux-thunk';
 import { AnyAction } from 'redux'
 
-export const fetchVideos = (): ThunkAction<void, RootState, unknown, AnyAction> => {
+export const fetchVideos = () => {
   return async (dispatch) => {
     try {
       dispatch({
