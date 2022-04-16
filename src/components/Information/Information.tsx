@@ -1,16 +1,16 @@
 // React Types
-import { Fragment, useState, FC, ReactElement } from "react";
-import ContactModal from "../ContactModal/ContactModal";
+import { FC, ReactElement } from "react";
 // Styles
 import "./information.scss";
+// Components
+import MailTo from "../MailTo/MailTo"
 
 const Information: FC<{ information: information }> = ({
   information,
 }): ReactElement => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   return (
-    <Fragment>
       <div className="information-container">
         <img
           className="information-image"
@@ -20,9 +20,10 @@ const Information: FC<{ information: information }> = ({
         <main className="tiger-container">
           <p>{information.information}</p>
           <p style={{ marginBottom: "30px" }}>CV available upon request.</p>
-          <button className="button-container" onClick={() => setShow(true)}>
+            <MailTo label="Contact Me: info@tigersaysavanh.com" mailto="mailto:info@tigersaysavanh.com" />
+          {/* <button className="button-container" onClick={() => setShow(true)}>
             CONTACT
-          </button>
+          </button> */}
         </main>
         <section className="clients-container">
           <p className="clients-title">CLIENTS:</p>
@@ -38,8 +39,6 @@ const Information: FC<{ information: information }> = ({
           </div>
         </section>
       </div>
-      {show && <ContactModal setShow={setShow} />}
-    </Fragment>
   );
 };
 
