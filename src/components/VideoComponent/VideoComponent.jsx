@@ -1,16 +1,13 @@
-// React Types
-import { FC, ReactElement } from "react";
 // ReactPlayer
 import ReactPlayer from "react-player";
 // Styles
 import "./videoComponent.scss";
 
-const VideoComponent: FC<{ video: video }> = ({ video }): ReactElement => {
+const VideoComponent = ({ video })=> {
   return (
     <div className="video-component">
       <div className="video-container">
         <div className="player-container">
-          // @ts-ignore
           <ReactPlayer
             url={video.url}
             className="desktop-player"
@@ -22,7 +19,6 @@ const VideoComponent: FC<{ video: video }> = ({ video }): ReactElement => {
             <p>{video.title}</p>
             <p>{video.artist}</p>
           </div>
-          // @ts-ignore
           <ReactPlayer
             url={video.url}
             className="mobile-player"
