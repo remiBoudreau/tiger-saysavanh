@@ -9,7 +9,7 @@ import { RootState } from '../store';
 import { ThunkAction } from 'redux-thunk';
 import { AnyAction } from 'redux'
 
-export const fetchAlbums = (): ThunkAction<void, RootState, unknown, AnyAction> => {
+export const fetchAlbums = () => {
   return async (dispatch) => {
     try {
       dispatch({
@@ -46,7 +46,6 @@ export const fetchAlbums = (): ThunkAction<void, RootState, unknown, AnyAction> 
       });
       
     } catch (error) {
-      //@ts-ignore
       dispatch({
         type: ALBUMS_FETCH_FAIL,
         payload: error.message
