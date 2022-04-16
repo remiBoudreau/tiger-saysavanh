@@ -10,6 +10,7 @@ const Footer: FC = (): ReactElement => {
       <a href="https://tigersaysavanh/info" className="link-container">
         Tiger Saysavanh
       </a>
+    </footer>
   );
 };
 
