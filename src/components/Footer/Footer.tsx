@@ -10,13 +10,6 @@ const Footer: FC = (): ReactElement => {
       <a href="https://tigersaysavanh/info" className="link-container">
         Tiger Saysavanh
       </a>
-      <div className="cross">
-      &nbsp;x&nbsp;
-      </div>
-      <a href="https://github.com/remiBoudreau" className="link-container">
-        Jean-Michel Boudreau
-      </a>
-    </footer>
   );
 };
 
