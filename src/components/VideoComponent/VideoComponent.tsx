@@ -10,6 +10,7 @@ const VideoComponent: FC<{ video: video }> = ({ video }): ReactElement => {
     <div className="video-component">
       <div className="video-container">
         <div className="player-container">
+          // @ts-ignore
           <ReactPlayer
             url={video.url}
             className="desktop-player"
