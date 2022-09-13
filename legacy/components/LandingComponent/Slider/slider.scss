@@ -1,0 +1,29 @@
+.slider-wrapper {
+  padding-left: 25%;
+  width: 75%;
+  display: inline-block;
+  transition: 500ms;
+  transform: translateX(0%);
+}
+.slider-container {
+  width: 100%;
+  display: flex;
+  padding-top: 5vw;
+}
+.slider-image {
+  object-fit: cover;
+  min-width: 100%;
+}
+@media (max-width: 934px) {
+  .slider-container {
+    width: 100%;
+    display: flex;
+  }
+  .slider-wrapper {
+    padding-left: 0%;
+    width: 100%;
+    display: inline-block;
+    transition: 500ms;
+    transform: translateX(0%);
+  }
+}

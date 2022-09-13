@@ -1,0 +1,140 @@
+.portrait-container {
+  position: relative;
+  width: 90%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 2.5vw;
+  padding-bottom: 2.5vw;
+  transition: 500ms;
+  transition-delay: 250ms;
+}
+.portrait-likeA {
+  position: relative;
+  cursor: zoom-in;
+  transition: 500ms;
+  transition-delay: 250ms;
+}
+.portrait-image {
+  top: 0;
+  left: 0;
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 500ms;
+  transition-delay: 250ms;
+  &:hover {
+    + .portrait-overlay {
+      opacity: 1;
+    }
+  }
+}
+.portrait-element {
+  overflow: hidden;
+  transition: 500ms;
+  transition-delay: 250ms;
+  cursor: pointer;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 50%) 0px 0px 50px 0px;
+    .portrait-image {
+      transform: scale(1.25);
+    }
+    .portrait-title {
+      opacity: 1;
+    }
+  }
+}
+.photo-select {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.photo-wide {
+  margin-left: -3.5vw;
+  transform: translateX(0%);
+}
+.photo-last {
+  margin-left: 0vw;
+}
+.gtfo {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0ms;
+  transition-delay: 0ms;
+}
+.portrait-overlay {
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: transparent;
+  transition: 500ms;
+  transition-delay: 250ms;
+}
+.photo-title {
+  font-size: 30px;
+  margin: 0;
+}
+.portrait-title {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  font-size: 42px;
+  color: transparent;
+  transition: 500ms;
+  transition-delay: 250ms;
+  pointer-events: none;
+  text-align-last: center;
+  opacity: 0;
+}
+
+.photo-text {
+  font-size: 16px;
+}
+.photo-details {
+  pointer-events: none;
+  position: absolute;
+  top: 5vw;
+  padding-left: 2.5vw;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  white-space: pre-wrap;
+  &:nth-child(even) {
+    left: 100%;
+  }
+  &:nth-child(odd) {
+    right: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .portrait-container {
+    position: relative;
+    width: 30vw;
+    padding-left: 5vw;
+    padding-right: 0vw;
+    padding-top: 2.5vw;
+    padding-bottom: 0vw;
+    margin-top: -7.5vw;
+    &:nth-child(even) {
+      margin-left: 47.5vw;
+    }
+    &:nth-child(1) {
+      margin-top: 0px;
+      padding-top: 0;
+    }
+  }
+}
+@media (min-width: 1024px) {
+}

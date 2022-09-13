@@ -1,0 +1,131 @@
+.button-container {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #0a0a0a;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: #0a0a0a;
+  cursor: pointer;
+  &:hover {
+    color: #0a0a0a;
+    background-color: #ffffff;
+  }
+}
+.information-container {
+  position: relative;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-bottom: 100px;
+}
+.information-image {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 100px;
+}
+.clients-container {
+  display: inline-block;
+  position: absolute;
+  left: 5vw;
+  font-weight: 700;
+}
+.clients-title {
+  width: 100%;
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+.tiger-container {
+  position: relative;
+  left: 45vw;
+  width: 45vw;
+  display: inline-block;
+  line-height: 24px;
+  font-size: 20px;
+}
+.client-container {
+  box-sizing: border-box;
+  line-height: 24px;
+  font-size: 18px;
+  & .client-url {
+    color: #5f5f5f;
+    text-decoration: none;
+    display: inline-block;
+    transition: 500ms;
+
+    &:hover {
+      color: #0a0a0a;
+    }
+    &::after {
+      content: "";
+      width: 0px;
+      height: 2px;
+      display: block;
+      background: #5f5f5f;
+      transition: 500ms;
+    }
+
+    &:hover::after {
+      width: 100%;
+      color: #0a0a0a;
+    }
+  }
+}
+hr {
+  color: #5f5f5f;
+}
+@media (max-width: 768px) {
+  .information-image {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 40px;
+  }
+  .clients-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .clients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+  }
+  .tiger-container {
+    position: relative;
+    width: 100%;
+    left: 0vw;
+    text-align: center;
+    display: block;
+    margin-bottom: 100px;
+    font-size: 16px;
+  }
+  .clients-title {
+    font-size: 24px;
+    width: 100%;
+  }
+  .client-container {
+    line-height: 42px;
+  }
+  hr {
+    width: 75%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    color: #0a0a0a;
+    margin: 0;
+  }
+}
+@media (max-width: 420px) {
+  .clients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+  }
+}

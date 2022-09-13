@@ -1,0 +1,57 @@
+// MOBILE
+// on scrolldown make navbar go up out of screen
+.header-container {
+  background: white;
+  width: 100vw;
+  position: fixed;
+  height: 100px;
+  z-index: 20;
+  transition: 500ms;
+  top: 0px;
+}
+.header-padding {
+  height: 100px;
+  transition: 500ms;
+  transition-delay: 250ms;
+}
+.hide {
+  top: -100px;
+}
+.elements-container {
+  padding: 20px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+.logo-container {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  transform: scale(1);
+  transition: transform 500ms;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.header-logo {
+  object-fit: cover;
+  height: 100%;
+  cursor: pointer;
+}
+.navigation-wrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+@media (min-width: 1024px) {
+}
+@media (min-width: 768px) {
+  .elements-container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
